@@ -22,7 +22,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use("/auth", authRouter);
 app.use("/api", dataRouter);
 
